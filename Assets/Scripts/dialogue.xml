@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogues>
+	<messages>
+		<message id="1">
+			<source>Leraar</source>
+			<text>Waarom ben je te laat?</text>
+			<option_1 destination="2">Mijn trein had vertraging.</option_1>
+			<option_2 destination="3">Ik heb mij verslapen.</option_2>
+			<option_3 destination="4">Maar het is nog geen 5 over.</option_3>
+		</message>
+		<message id="2">
+			<source>Leraar</source>
+			<text>Dan had je een trein eerder moeten nemen.</text>
+			<option_1 destination="4">Maar ik had de eerste trein.</option_1>
+			<option_2 destination="4">Maar hij zat helemaal vol.</option_2>
+			<option_3 destination="3">Maar ik heb al zo weinig slaap.</option_3>
+		</message>
+		<message id="3">
+			<source>Leraar</source>
+			<text>Dan had je maar eerder moeten gaan slapen.</text>
+			<option_1 destination="5">Maar ik wou nog serie kijken.</option_1>
+			<option_2 destination="4">Oke, dat zal ik de volgende keer zeker doen.</option_2>
+			<option_3 destination="4">Maar ik heb problemen met slapen.</option_3>
+		</message>
+		<message id="4">
+			<source>Leraar</source>
+			<text>Oke, je mag naar binnen maar ik zet je wel te laat op.</text>
+		</message>
+		<message id="5">
+			<source>Leraar</source>
+			<text>Ga maar naar de kantine, ik zet je op afwezig.</text>
+		</message>
+	</messages>
+</dialogues>
