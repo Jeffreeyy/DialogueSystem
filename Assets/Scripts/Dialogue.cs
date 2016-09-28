@@ -14,12 +14,7 @@ public class Dialogue
     [XmlElement("text")]
     public string text;
 
-    [XmlElement("option_1")]
-    public string option_1;
-
-    [XmlElement("option_2")]
-    public string option_2;
-
-    [XmlElement("option_3")]
-    public string option_3;
+    [XmlArray("options")]
+    [XmlArrayItem("option")]
+    public string[] options;
 }
