@@ -1,67 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dialogues>
-	<messages>
-		<message id="1">
-			<source>Leraar</source>
-			<text>Waarom ben je te laat?</text>
+  <messages>
+    <message id="1">
+      <source>Benjamin</source>
+      <text>Hey! hoe gaat het?</text>
       <options>
-			  <option>Mijn trein had vertraging.</option>
-			  <option>Ik heb mij verslapen.</option>
-			  <option>Maar het is nog geen 5 over.</option>
+        <option>Het gaat prima, met jou?</option>
+        <option>Het gaat niet zo goed...</option>
+        <option>Het kan beter, met jou?</option>
       </options>
       <destinations>
         <destination>2</destination>
-        <destination>3</destination>
-        <destination>4</destination>
-      </destinations>
-		</message>
-		<message id="2">
-			<source>Leraar</source>
-			<text>Dan had je een trein eerder moeten nemen.</text>
-      <options>
-        <option>Maar ik had de eerste trein.</option>
-        <option>Maar hij zat helemaal vol.</option>
-        <option>Maar ik heb al zo weinig slaap.</option>
-      </options>
-      <destinations>
-        <destination>4</destination>
-        <destination>4</destination>
-        <destination>3</destination>
-      </destinations>
-		</message>
-		<message id="3">
-			<source>Leraar</source>
-			<text>Dan had je maar eerder moeten gaan slapen.</text>
-      <options>
-        <option>Maar ik wou nog serie kijken.</option>
-        <option>Oke, dat zal ik de volgende keer zeker doen.</option>
-        <option>Maar ik heb problemen met slapen.</option>
-      </options>
-      <destinations>
         <destination>5</destination>
         <destination>4</destination>
+      </destinations>
+    </message>
+    <message id="2">
+      <source>Benjamin</source>
+      <text>Met mij gaat het ook goed! Wat ga je vandaag doen?</text>
+      <options>
+        <option>Ik moet vandaag naar school.</option>
+        <option>Ik ga gezellig gamen met wat vrienden.</option>
+        <option>Ik moet nog wat boodschappen doen voor mijn moeder.</option>
+      </options>
+      <destinations>
+        <destination>3</destination>
         <destination>4</destination>
+        <destination>3</destination>
       </destinations>
-		</message>
-		<message id="4">
-			<source>Leraar</source>
-			<text>Oke, je mag naar binnen maar ik zet je wel te laat op.</text>
+    </message>
+    <message id="3">
+      <source>Benjamin</source>
+      <text>Dat is natuurlijk nooit leuk haha! Nou nog veel plezier!</text>
       <options>
-        <option>Oke.</option>
+        <option>Dankjewel haha!</option>
       </options>
       <destinations>
         <destination>0</destination>
       </destinations>
-		</message>
-		<message id="5">
-			<source>Leraar</source>
-			<text>Ga maar naar de kantine, ik zet je op afwezig.</text>
+    </message>
+    <message id="4">
+      <source>Benjamin</source>
+      <text>Gezellig! Veel plezier!</text>
       <options>
-        <option>Oke.</option>
+        <option>Dankjewel!</option>
       </options>
       <destinations>
         <destination>0</destination>
       </destinations>
-		</message>
-	</messages>
+    </message>
+    <message id="5">
+      <source>Benjamin</source>
+      <text>Wat is er aan de hand?</text>
+      <options>
+        <option>Mijn vriendin heeft het uitgemaakt.</option>
+        <option>Mijn oma is erg ziek.</option>
+        <option>Ik voel me niet zo lekker.</option>
+      </options>
+      <destinations>
+        <destination>6</destination>
+        <destination>6</destination>
+        <destination>6</destination>
+      </destinations>
+    </message>
+    <message id="6">
+      <source>Benjamin</source>
+      <text>Ah, wat vervelend! Als je me nodig hebt, ben ik er voor je!</text>
+      <options>
+        <option>Dankjewel!</option>
+      </options>
+      <destinations>
+        <destination>0</destination>
+      </destinations>
+    </message>
+    <message id="7">
+      <source>Lorenzo</source>
+      <text>Team holding me back...</text>
+      <options>
+        <option>PJSalt.</option>
+        <option>Dan moet je leren carrien.</option>
+        <option>Je bent gewoon slecht, hehe xd!</option>
+      </options>
+      <destinations>
+        <destination>8</destination>
+        <destination>9</destination>
+        <destination>8</destination>
+      </destinations>
+    </message>
+    <message id="8">
+      <source>Lorenzo</source>
+      <text>Fuck you!</text>
+      <options>
+        <option>Haha! learn to play noob!</option>
+      </options>
+      <destinations>
+        <destination>0</destination>
+      </destinations>
+    </message>
+    <message id="9">
+      <source>Lorenzo</source>
+      <text>Maar ik heb altijd noob teammates en ze lopen altijd te feeden!</text>
+      <options>
+        <option>Misschien ligt het wel aan jou!</option>
+      </options>
+      <destinations>
+        <destination>8</destination>
+      </destinations>
+    </message>
+  </messages>
 </dialogues>
