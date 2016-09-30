@@ -28,13 +28,11 @@ public class DialogueLoader : MonoBehaviour
     {
         //Load all the data in the container
         _dc = DialogueContainer.Load(_file);
-        //Load the dialogue's first node
-        LoadDialogue(1);
     }
 
     public void CheckDialogue(int index)
     {
-        LoadDialogue(_currentDialogue.destinations[index]);
+        LoadDialogue(_currentDialogue.Destinations[index]);
     }
 
     public void LoadDialogue(int ID)
@@ -48,11 +46,11 @@ public class DialogueLoader : MonoBehaviour
         foreach (Dialogue dialogue in _dc.dialogues)
         {
             //Check if the ID is the same as one of the dialogue's ID
-            if (dialogue.id == ID)
+            if (dialogue.ID == ID)
             {
                 GetDialogue(dialogue);
 
-                if (_currentDialogue.options.Length > 0)
+                if (_currentDialogue.Options.Length > 0)
                 {
                     RemoveButtons(); //Removes buttons that arent used
                     AddButtons();   // Adds buttons equal to the amount of responses/options to the current dialogue
@@ -69,8 +67,8 @@ public class DialogueLoader : MonoBehaviour
     {
         //sets the text for the current dialog and shows the name of the NPC talking
         _currentDialogue = dialogue;
-        _source.text = _currentDialogue.source;
-        _speech.text = _currentDialogue.text;
+        _source.text = _currentDialogue.Source;
+        _speech.text = _currentDialogue.Text;
     }
 
     void RemoveButtons()
@@ -85,10 +83,10 @@ public class DialogueLoader : MonoBehaviour
     void AddButtons()
     {
         //Adds buttons that are needed for the current dialogue
-        for (int i = 0; i < _currentDialogue.options.Length; i++)
+        for (int i = 0; i < _currentDialogue.Options.Length; i++)
         {
             _options[i].gameObject.SetActive(true);
-            _options[i].gameObject.GetComponentInChildren<Text>().text = _currentDialogue.options[i];
+            _options[i].gameObject.GetComponentInChildren<Text>().text = _currentDialogue.Options[i];
         }
     }
 }

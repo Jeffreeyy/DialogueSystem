@@ -107,5 +107,59 @@
         <destination>8</destination>
       </destinations>
     </message>
+    <message id="10">
+      <source>Jeffrey</source>
+      <text>Heb je mijn portfolio al gezien?</text>
+      <options>
+        <option>Ja.</option>
+        <option>Nee, nog niet.</option>
+      </options>
+      <destinations>
+        <destination>11</destination>
+        <destination>13</destination>
+      </destinations>
+    </message>
+    <message id="11">
+      <source>Jeffrey</source>
+      <text>En? Wat vond je er van?</text>
+      <options>
+        <option>Zag er goed uit!</option>
+        <option>Er valt nog wel wat dingen te verbeteren.</option>
+      </options>
+      <destinations>
+        <destination>12</destination>
+        <destination>14</destination>
+      </destinations>
+    </message>
+    <message id="12">
+      <source>Jeffrey</source>
+      <text>Dankjewel! Dat stel ik erg op prijs!</text>
+      <options>
+        <option>Geen probleem!</option>
+      </options>
+      <destinations>
+        <destination>0</destination>
+      </destinations>
+    </message>
+    <message id="13">
+      <source>Jeffrey</source>
+      <text>Ga dan snel naar www.jeffreylaarman.com!</text>
+      <options>
+        <option>Zal ik doen!</option>
+      </options>
+      <destinations>
+        <destination>0</destination>
+      </destinations>
+    </message>
+    <message id="14">
+      <source>Jeffrey</source>
+      <text>Bedankt voor je feedback!</text>
+      <options>
+        <option>Geen probleem!</option>
+      </options>
+      <destinations>
+        <destination>0</destination>
+      </destinations>
+    </message>
   </messages>
 </dialogues>

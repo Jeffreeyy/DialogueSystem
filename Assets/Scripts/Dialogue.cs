@@ -1,25 +1,23 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Xml;
+﻿using System.Xml;
 using System.Xml.Serialization;
 
 public class Dialogue
 {
     [XmlAttribute("id")]
-    public int id;
+    public int ID { get; set; }
 
     [XmlElement("source")]
-    public string source;
+    public string Source { get; set; }
 
     [XmlElement("text")]
-    public string text;
+    public string Text { get; set; }
 
     [XmlArray("options")]
     [XmlArrayItem("option")]
-    public string[] options;
+    public string[] Options { get; set; }
 
 
     [XmlArray("destinations")]
     [XmlArrayItem("destination")]
-    public int[] destinations;
+    public int[] Destinations { get; set; }
 }
