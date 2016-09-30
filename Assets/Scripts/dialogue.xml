@@ -9,6 +9,11 @@
 			  <option destination="3">Ik heb mij verslapen.</option>
 			  <option destination="4">Maar het is nog geen 5 over.</option>
       </options>
+      <destinations>
+        <destination>2</destination>
+        <destination>3</destination>
+        <destination>4</destination>
+      </destinations>
 		</message>
 		<message id="2">
 			<source>Leraar</source>
@@ -18,6 +23,11 @@
         <option destination="4">Maar hij zat helemaal vol.</option>
         <option destination="3">Maar ik heb al zo weinig slaap.</option>
       </options>
+      <destinations>
+        <destination>4</destination>
+        <destination>4</destination>
+        <destination>3</destination>
+      </destinations>
 		</message>
 		<message id="3">
 			<source>Leraar</source>
@@ -27,6 +37,11 @@
         <option destination="4">Oke, dat zal ik de volgende keer zeker doen.</option>
         <option destination="4">Maar ik heb problemen met slapen.</option>
       </options>
+      <destinations>
+        <destination>5</destination>
+        <destination>4</destination>
+        <destination>4</destination>
+      </destinations>
 		</message>
 		<message id="4">
 			<source>Leraar</source>
@@ -34,6 +49,9 @@
       <options>
         <option destination="0">Oke.</option>
       </options>
+      <destinations>
+        <destination>0</destination>
+      </destinations>
 		</message>
 		<message id="5">
 			<source>Leraar</source>
@@ -41,6 +59,9 @@
       <options>
         <option destination="0">Oke.</option>
       </options>
+      <destinations>
+        <destination>0</destination>
+      </destinations>
 		</message>
 	</messages>
 </dialogues>

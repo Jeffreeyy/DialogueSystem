@@ -11,6 +11,9 @@ public class DialogueLoader : MonoBehaviour {
     [SerializeField]private Text _speech;
     [SerializeField]private Button[] _options;
 
+    //Current dialogue
+    private Dialogue _currentDialogue;
+
     //Create dialogue container
     private DialogueContainer _dc;
 
@@ -22,6 +25,11 @@ public class DialogueLoader : MonoBehaviour {
         LoadDialogue(1);
 	}
 
+    public void CheckDialogue(int index)
+    {
+        LoadDialogue(_currentDialogue.destinations[index]);
+    }
+
     public void LoadDialogue(int ID)
     {
         //Check for each dialogue
@@ -30,16 +38,17 @@ public class DialogueLoader : MonoBehaviour {
             //Check if the ID is the same as one of the dialogue's ID
             if (dialogue.id == ID)
             {
+                _currentDialogue = dialogue;
                 //Set all the text and buttons and removes buttons if not needed
-                _source.text = dialogue.source;
-                _speech.text = dialogue.text;
-                if (dialogue.options.Length > 0)
+                _source.text = _currentDialogue.source;
+                _speech.text = _currentDialogue.text;
+                if (_currentDialogue.options.Length > 0)
                 {
                     RemoveButtons();
-                    for (int i = 0; i < dialogue.options.Length; i++)
+                    for (int i = 0; i < _currentDialogue.options.Length; i++)
                     {
                         _options[i].gameObject.SetActive(true);
-                        _options[i].gameObject.GetComponentInChildren<Text>().text = dialogue.options[i];
+                        _options[i].gameObject.GetComponentInChildren<Text>().text = _currentDialogue.options[i];
                     }
                 }
                 else

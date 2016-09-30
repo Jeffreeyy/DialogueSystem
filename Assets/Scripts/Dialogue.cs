@@ -17,4 +17,9 @@ public class Dialogue
     [XmlArray("options")]
     [XmlArrayItem("option")]
     public string[] options;
+
+
+    [XmlArray("destinations")]
+    [XmlArrayItem("destination")]
+    public int[] destinations;
 }
