@@ -7,6 +7,7 @@ public class DialogueLoader : MonoBehaviour {
     [SerializeField]private TextAsset _file;
 
     [Header("Text Objects")]
+    [SerializeField]private GameObject _panel;
     [SerializeField]private Text _source;
     [SerializeField]private Text _speech;
     [SerializeField]private Button[] _options;
@@ -32,6 +33,9 @@ public class DialogueLoader : MonoBehaviour {
 
     public void LoadDialogue(int ID)
     {
+        if (ID == 0)
+            _panel.GetComponent<TogglePanel>().SetPanelState(false);
+
         //Check for each dialogue
         foreach (Dialogue dialogue in _dc.dialogues)
         {

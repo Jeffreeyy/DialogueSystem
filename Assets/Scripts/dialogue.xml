@@ -5,9 +5,9 @@
 			<source>Leraar</source>
 			<text>Waarom ben je te laat?</text>
       <options>
-			  <option destination="2">Mijn trein had vertraging.</option>
-			  <option destination="3">Ik heb mij verslapen.</option>
-			  <option destination="4">Maar het is nog geen 5 over.</option>
+			  <option>Mijn trein had vertraging.</option>
+			  <option>Ik heb mij verslapen.</option>
+			  <option>Maar het is nog geen 5 over.</option>
       </options>
       <destinations>
         <destination>2</destination>
@@ -19,9 +19,9 @@
 			<source>Leraar</source>
 			<text>Dan had je een trein eerder moeten nemen.</text>
       <options>
-        <option destination="4">Maar ik had de eerste trein.</option>
-        <option destination="4">Maar hij zat helemaal vol.</option>
-        <option destination="3">Maar ik heb al zo weinig slaap.</option>
+        <option>Maar ik had de eerste trein.</option>
+        <option>Maar hij zat helemaal vol.</option>
+        <option>Maar ik heb al zo weinig slaap.</option>
       </options>
       <destinations>
         <destination>4</destination>
@@ -33,9 +33,9 @@
 			<source>Leraar</source>
 			<text>Dan had je maar eerder moeten gaan slapen.</text>
       <options>
-        <option destination="5">Maar ik wou nog serie kijken.</option>
-        <option destination="4">Oke, dat zal ik de volgende keer zeker doen.</option>
-        <option destination="4">Maar ik heb problemen met slapen.</option>
+        <option>Maar ik wou nog serie kijken.</option>
+        <option>Oke, dat zal ik de volgende keer zeker doen.</option>
+        <option>Maar ik heb problemen met slapen.</option>
       </options>
       <destinations>
         <destination>5</destination>
@@ -47,7 +47,7 @@
 			<source>Leraar</source>
 			<text>Oke, je mag naar binnen maar ik zet je wel te laat op.</text>
       <options>
-        <option destination="0">Oke.</option>
+        <option>Oke.</option>
       </options>
       <destinations>
         <destination>0</destination>
@@ -57,7 +57,7 @@
 			<source>Leraar</source>
 			<text>Ga maar naar de kantine, ik zet je op afwezig.</text>
       <options>
-        <option destination="0">Oke.</option>
+        <option>Oke.</option>
       </options>
       <destinations>
         <destination>0</destination>

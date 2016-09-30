@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d7a5dd1c427d34f4dab1a163d819f0d8
+timeCreated: 1475227049
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SmackAttack BB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 517ee9f34e0c3114297dc5d6726ce29d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
