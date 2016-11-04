@@ -24,12 +24,19 @@ public class DialogueLoader : MonoBehaviour
     //Create dialogue container
     private DialogueContainer _dc;
 
-    void Start()
+    void OnEnable()
     {
         //Load all the data in the container
         _dc = DialogueContainer.Load(_file);
+        House.OnLoadDialogue += LoadDialogue;
     }
 
+    void OnDisable()
+    {
+        House.OnLoadDialogue -= LoadDialogue;
+    }
+
+    //Attacted to the buttons in the dialogue, checks the dialogue's destination and set it to that dialogue
     public void CheckDialogue(int index)
     {
         LoadDialogue(_currentDialogue.Destinations[index]);
@@ -48,7 +55,7 @@ public class DialogueLoader : MonoBehaviour
             //Check if the ID is the same as one of the dialogue's ID
             if (dialogue.ID == ID)
             {
-                GetDialogue(dialogue);
+                SetDialogue(dialogue);
 
                 if (_currentDialogue.Options.Length > 0)
                 {
@@ -63,7 +70,7 @@ public class DialogueLoader : MonoBehaviour
         }
     }
 
-    void GetDialogue(Dialogue dialogue)
+    void SetDialogue(Dialogue dialogue)
     {
         //sets the text for the current dialog and shows the name of the NPC talking
         _currentDialogue = dialogue;

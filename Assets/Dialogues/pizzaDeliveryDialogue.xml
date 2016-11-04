@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogues>
+  <messages>
+    <message id="1">
+      <source>Doorbell</source>
+      <text>Ding dong!</text>
+      <options>
+        <option>Pizza delivery!</option>
+        <option>Your pizza is here!</option>
+      </options>
+      <destinations>
+        <destination>2</destination>
+        <destination>2</destination>
+      </destinations>
+    </message>
+    <message id="2">
+      <source>Old man</source>
+      <text>Right on time!</text>
+      <options>
+        <option>One 4 cheese pizza and one cola.</option>
+        <option>Two salami pizzas, one cola and one fanta.</option>
+        <option>Two pineapple pizzas, one 4 cheese pizza and 1 salami pizza.</option>
+      </options>
+      <destinations>
+        <destination>3</destination>
+        <destination>4</destination>
+        <destination>3</destination>
+      </destinations>
+    </message>
+    <message id="3">
+      <source>Old man</source>
+      <text>Sorry... but i didn't order that.</text>
+      <options>
+        <option>Did you order the one 4 cheese pizza and one cola.</option>
+        <option>Did you order the two salami pizzas, one cola and one fanta.</option>
+        <option>Did you order the two pineapple pizzas, one 4 cheese pizza and 1 salami pizza.</option>
+      </options>
+      <destinations>
+        <destination>6</destination>
+        <destination>4</destination>
+        <destination>6</destination>
+      </destinations>
+    </message>
+    <message id="4">
+      <source>Old man</source>
+      <text>I love salami pizzas!</text>
+      <options>
+        <option>That'll be $18</option>
+      </options>
+      <destinations>
+        <destination>5</destination>
+      </destinations>
+    </message>
+    <message id="5">
+      <source>Old man</source>
+      <text>Thank you!</text>
+      <options>
+        <option>No problem! Have a nice day!</option>
+      </options>
+      <destinations>
+        <destination>0</destination>
+      </destinations>
+    </message>
+    <message id="6">
+      <source>Old man</source>
+      <text>I didn't order that one either.</text>
+      <options>
+        <option>Did you order the one 4 cheese pizza and one cola.</option>
+        <option>Did you order the two salami pizzas, one cola and one fanta.</option>
+        <option>Did you order the two pineapple pizzas, one 4 cheese pizza and 1 salami pizza.</option>
+      </options>
+      <destinations>
+        <destination>3</destination>
+        <destination>4</destination>
+        <destination>3</destination>
+      </destinations>
+    </message>
+    <message id="7">
+      <source>Doorbell</source>
+      <text>Ding dong!</text>
+      <options>
+        <option>Pizza delivery!</option>
+        <option>Your pizza is here!</option>
+      </options>
+      <destinations>
+        <destination>8</destination>
+        <destination>8</destination>
+      </destinations>
+    </message>
+    <message id="8">
+      <source>Old house</source>
+      <text>[Silence Intensifies]</text>
+      <options>
+        <option>Nobody seems to be home. Wrong address i guess...</option>
+        <option>This house looks like nobody has lived here for years.</option>
+      </options>
+      <destinations>
+        <destination>0</destination>
+        <destination>0</destination>
+      </destinations>
+    </message>
+  </messages>
+</dialogues>
