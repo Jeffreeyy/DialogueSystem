@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CheckCollision : MonoBehaviour
 {
-    public delegate void TogglePanelAction(bool state);
-    public static event TogglePanelAction OnTogglePanel;
+    public delegate void CanInteract(bool state);
+    public static event CanInteract OnCanInteract;
 
     public delegate void ToggleInteractText(bool state);
     public static event ToggleInteractText OnToggleInteractText;
@@ -40,16 +40,16 @@ public class CheckCollision : MonoBehaviour
         if(OnToggleInteractText != null)
             OnToggleInteractText(false);
 
-        if(OnTogglePanel != null)
-            OnTogglePanel(false);
+        if(OnCanInteract != null)
+            OnCanInteract(false);
     }
 
     private void CheckInteractState()
     {
         if(_canInteract)
         {
-            if (OnTogglePanel != null)
-                OnTogglePanel(true);
+            if (OnCanInteract != null)
+                OnCanInteract(true);
 
             if(OnToggleInteractText != null)
                 OnToggleInteractText(false);

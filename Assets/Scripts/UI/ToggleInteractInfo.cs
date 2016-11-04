@@ -11,6 +11,11 @@ public class ToggleInteractInfo : MonoBehaviour {
         CheckCollision.OnToggleInteractText += ToggleInteractState;
     }
 
+    void OnDisable()
+    {
+        CheckCollision.OnToggleInteractText -= ToggleInteractState;
+    }
+
     private void ToggleInteractState(bool state)
     {
         _interactText.enabled = state;

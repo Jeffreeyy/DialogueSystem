@@ -8,12 +8,14 @@ public class TogglePanel : MonoBehaviour
     void OnEnable()
     {
         _animator = GetComponent<Animator>();
-        CheckCollision.OnTogglePanel += SetPanelState;
+        CheckCollision.OnCanInteract += SetPanelState;
+        DialogueLoader.OnSetPanelState += SetPanelState;
     }
 
     void OnDisable()
     {
-        CheckCollision.OnTogglePanel -= SetPanelState;
+        CheckCollision.OnCanInteract -= SetPanelState;
+        DialogueLoader.OnSetPanelState -= SetPanelState;  
     }
 
     public void SetPanelState(bool state)

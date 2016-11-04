@@ -10,8 +10,6 @@ public class DialogueLoader : MonoBehaviour
 
     [Header("Text Objects")]
     [SerializeField]
-    private GameObject _panel; //Panel
-    [SerializeField]
     private Text _source;    //Npc thats talking
     [SerializeField]
     private Text _speech;    //The npc's dialogue
@@ -27,16 +25,21 @@ public class DialogueLoader : MonoBehaviour
     public delegate void ToggleButtons(Dialogue dialogue, Button[] buttons,bool enabled);
     public static ToggleButtons OnToggleButtons;
 
+    public delegate void PanelState(bool enabled);
+    public static PanelState OnSetPanelState;
+
     void OnEnable()
     {
         //Load all the data in the container
         _dc = DialogueContainer.Load(_file);
         House.OnLoadDialogue += LoadDialogue;
+        StartDialogueButton.OnStartDialogue += LoadDialogue;
     }
 
     void OnDisable()
     {
         House.OnLoadDialogue -= LoadDialogue;
+        StartDialogueButton.OnStartDialogue -= LoadDialogue;
     }
 
     //Attacted to the buttons in the dialogue, checks the dialogue's destination and set it to that dialogue
@@ -45,11 +48,13 @@ public class DialogueLoader : MonoBehaviour
         LoadDialogue(_currentDialogue.Destinations[index]);
     }
 
+    //Load the Dialogue from the dialogue container
     public void LoadDialogue(int ID)
     {
         if(ID == 0)
         {
-            _panel.GetComponent<TogglePanel>().SetPanelState(false);
+            if(OnSetPanelState != null)
+                OnSetPanelState(false);    
         }
 
         //Check for each dialogue in the container
@@ -62,13 +67,17 @@ public class DialogueLoader : MonoBehaviour
 
                 if (_currentDialogue.Options.Length > 0)
                 {
+                    if(OnToggleButtons != null)
+                    {
+                        OnToggleButtons(_currentDialogue, _options, false);     //Removes buttons that arent used
+                        OnToggleButtons(_currentDialogue, _options, true);      // Adds buttons equal to the amount of responses/options to the current dialogue
+                    }
 
-                    OnToggleButtons(_currentDialogue, _options,false);   //Removes buttons that arent used
-                    OnToggleButtons(_currentDialogue, _options,true);    // Adds buttons equal to the amount of responses/options to the current dialogue
                 }
                 else
                 {
-                    OnToggleButtons(_currentDialogue, _options,false);
+                    if(OnToggleButtons != null)
+                        OnToggleButtons(_currentDialogue, _options,false);      //Remove all the buttons
                 }
             }
         }
