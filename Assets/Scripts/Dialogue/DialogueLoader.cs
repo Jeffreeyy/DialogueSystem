@@ -24,6 +24,9 @@ public class DialogueLoader : MonoBehaviour
     //Create dialogue container
     private DialogueContainer _dc;
 
+    public delegate void ToggleButtons(Dialogue dialogue, Button[] buttons,bool enabled);
+    public static ToggleButtons OnToggleButtons;
+
     void OnEnable()
     {
         //Load all the data in the container
@@ -59,12 +62,13 @@ public class DialogueLoader : MonoBehaviour
 
                 if (_currentDialogue.Options.Length > 0)
                 {
-                    RemoveButtons(); //Removes buttons that arent used
-                    AddButtons();   // Adds buttons equal to the amount of responses/options to the current dialogue
+
+                    OnToggleButtons(_currentDialogue, _options,false);   //Removes buttons that arent used
+                    OnToggleButtons(_currentDialogue, _options,true);    // Adds buttons equal to the amount of responses/options to the current dialogue
                 }
                 else
                 {
-                    RemoveButtons();
+                    OnToggleButtons(_currentDialogue, _options,false);
                 }
             }
         }
@@ -76,23 +80,8 @@ public class DialogueLoader : MonoBehaviour
         _currentDialogue = dialogue;
         _source.text = _currentDialogue.Source;
         _speech.text = _currentDialogue.Text;
-    }
-
-    void RemoveButtons()
-    {
-        //Removes all buttons
-        for (int i = 0; i < _options.Length; i++)
-        {
-            _options[i].gameObject.SetActive(false);
-        }
-    }
-
-    void AddButtons()
-    {
-        //Adds buttons that are needed for the current dialogue
         for (int i = 0; i < _currentDialogue.Options.Length; i++)
         {
-            _options[i].gameObject.SetActive(true);
             _options[i].gameObject.GetComponentInChildren<Text>().text = _currentDialogue.Options[i];
         }
     }

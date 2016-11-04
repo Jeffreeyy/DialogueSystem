@@ -91,7 +91,7 @@
       <source>Old house</source>
       <text>[Silence Intensifies]</text>
       <options>
-        <option>Nobody seems to be home. Wrong address i guess...</option>
+        <option>No one seems to be home. Wrong address i guess...</option>
         <option>This house looks like nobody has lived here for years.</option>
       </options>
       <destinations>
